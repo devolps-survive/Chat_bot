@@ -1,0 +1,7 @@
+Welcome to our AI chatbot!
+
+This AI chatbot uses Gemini 2.5 Flash and Retrieval-Augmented Generation (RAG) to answer questions.
+
+Our company specializes in AI and machine learning solutions. 
+We offer consulting, software development, and custom AI chatbot systems.
+Our office is located in Addis Ababa, Ethiopia.
