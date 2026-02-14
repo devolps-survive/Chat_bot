@@ -1,0 +1,30 @@
+package com.example.chatbot.controller;
+
+import com.example.chatbot.model.User;
+import com.example.chatbot.service.AuthService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/auth")
+public class AuthController {
+
+    private final AuthService authService;
+
+    // ✅ Constructor Injection (VERY IMPORTANT)
+    public AuthController(AuthService authService) {
+        this.authService = authService;
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<String> register(@RequestBody User user) {
+        String token = authService.register(user);
+        return ResponseEntity.ok(token);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody User user) {
+        String token = authService.login(user.getEmail(), user.getPassword());
+        return ResponseEntity.ok(token);
+    }
+}
