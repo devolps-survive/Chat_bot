@@ -27,7 +27,7 @@ AI Chatbot is a full-stack web-based chatbot application that allows users to re
     └── .gitignore
 
 ## 🛠️ Technologies Used
-**Backend**
+** Backend **
 
  - Java
 
@@ -39,7 +39,7 @@ AI Chatbot is a full-stack web-based chatbot application that allows users to re
 
  - Maven
 
-**Frontend**
+** Frontend **
 
   - HTML5
 
@@ -57,7 +57,7 @@ AI Chatbot is a full-stack web-based chatbot application that allows users to re
 
   - Docker Compose
 
-##⚙️ Database Configuration
+## ⚙️ Database Configuration
 
  - Database name:
 
@@ -92,7 +92,7 @@ AI Chatbot is a full-stack web-based chatbot application that allows users to re
 
         http://localhost:8080
 
-**Option 2: Run with Docker**
+** Option 2: Run with Docker **
 
 ## From the docker folder:
 
@@ -128,6 +128,6 @@ Deployment to cloud (AWS / Azure / Render)
 
 WebSocket real-time chat
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Developed as a full-stack chatbot project using Java, Spring Boot, PostgreSQL, and Docker.
