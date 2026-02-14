@@ -1,0 +1,44 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Database files (if using SQLite)
+*.db
+*.sqlite3
+
+# Secret files
+config.py
+*.env
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Node modules (if using JS frontend)
+node_modules/
+
+# Build/dist folders
+build/
+dist/
+*.egg-info/
+
+# Mac OS files
+.DS_Store
+
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
