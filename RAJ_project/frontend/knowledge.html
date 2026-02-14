@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Knowledge Base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="knowledge.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Knowledge Base Admin</div>
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Documents</a>
+        <a href="chat.html">Chatbot</a>
+        <a href="index.html" class="logout-btn">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Knowledge Base Management</h1>
+    
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <h2>Upload Documents</h2>
+        <form id="upload-form">
+            <input type="file" id="file-input" multiple>
+            <button type="submit" class="primary-btn">Upload</button>
+        </form>
+        <p id="upload-status"></p>
+    </section>
+
+    <!-- Uploaded Documents List -->
+    <section class="documents-section">
+        <h2>Uploaded Documents</h2>
+        <table id="documents-table">
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Type</th>
+                    <th>Uploaded On</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JS will populate uploaded files here -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
