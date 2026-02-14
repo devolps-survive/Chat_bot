@@ -1,0 +1,119 @@
+* {
+    padding:0;
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eef6f7;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT */
+.form-section {
+    width: 40%;
+    padding: 60px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+.image1 {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.forgot {
+    display: block;
+    margin: 10px 0 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #555;
+}
+
+.btn {
+    width:100%;
+    padding: 12px;
+    background: #0b3a63;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social button {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: #fff;
+}
+
+.switch {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.switch span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* RIGHT */
+.image-section {
+    width: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; /* push image to right */
+    
+}
+
+
+.image-section img {
+     height: 100%;
+    object-fit: fill;
+}
+
+/* HIDDEN */
+.hidden {
+    display: none;
+}
