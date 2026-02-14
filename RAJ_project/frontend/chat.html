@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Interface with Sidebar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Chat History</h3>
+        <ul id="chat-history"></ul>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-wrapper">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message bot-msg">Hey, what can I help you?</div>
+        </div>
+
+        <div class="chat-input-wrapper">
+            <i class="fas fa-microphone audio-icon"></i>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <i class="fab fa-telegram-plane send-icon" id="send-btn"></i>
+        </div>
+    </div>
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>
