@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- LEFT SIDE -->
+    <div class="form-section">
+        <h1 id="form-title">Login</h1>
+
+        <form>
+            <div id="name-field" class="input-group hidden">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="username@gmail.com">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+            </div>
+
+            <a href="#" class="forgot">Forgot Password?</a>
+
+            <button type="submit" class="btn">Sign in</button>
+
+            <p class="divider">or continue with</p>
+
+            <div class="social">
+                <button><img src="https://i.pinimg.com/1200x/45/20/dd/4520ddfc56208707045c56232e946f7f.jpg" alt="" class="image1"></button>
+                <button><i class="fa-brands fa-github" style="color: rgba(30, 48, 80, 1.00);"></i></button>
+                <button><img src="https://i.pinimg.com/1200x/5b/b0/f7/5bb0f73a7b3e0f976acad614a42e5040.jpg" alt="" class="image1"></button>
+            </div>
+
+            <p class="switch">
+                Don't have an account?
+                <span onclick="toggleForm()">Register for free</span>
+            </p>
+        </form>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="image-section">
+        <img src="https://i.pinimg.com/1200x/b0/6f/49/b06f491e8970684acbba41c479034e35.jpg" alt="Chatbot">
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
