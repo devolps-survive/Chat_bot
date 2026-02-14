@@ -1,35 +1,45 @@
-package com.example.chatbot.model;
+package com.example.chatbot.service;
 
-import jakarta.persistence.*;
+import com.example.chatbot.model.User;
+import com.example.chatbot.repository.UserRepository;
+import com.example.chatbot.security.JwtUtil;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-@Entity
-@Table(name = "users")
-public class User {
+import java.util.Optional;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Service
+public class AuthService {
 
-    @Column(unique = true, nullable = false)
-    private String email;
+    private final UserRepository userRepository;
+    private final JwtUtil jwtUtil;
+    private final PasswordEncoder passwordEncoder;
 
-    @Column(nullable = false)
-    private String password;
+    public AuthService(UserRepository userRepository,
+                       JwtUtil jwtUtil,
+                       PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.jwtUtil = jwtUtil;
+        this.passwordEncoder = passwordEncoder;
+    }
 
-    private String name; // optional
+    public String register(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user);
+        return jwtUtil.generateToken(user.getEmail());
+    }
 
-    public User() {} // default constructor required by JPA
+    public String login(String email, String password) {
+        // Use Optional for null safety
+        Optional<User> userOpt = userRepository.findByEmail(email);
+        User user = userOpt.orElseThrow(() -> 
+                new UsernameNotFoundException("User not found with email: " + email));
 
-    // Getters and setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+        if (passwordEncoder.matches(password, user.getPassword())) {
+            return jwtUtil.generateToken(user.getEmail());
+        }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+        throw new RuntimeException("Invalid password");
+    }
 }
